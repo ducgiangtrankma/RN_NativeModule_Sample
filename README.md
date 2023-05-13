@@ -1,9 +1,11 @@
-#Set up android:
+# Set up android:
 - Step 1: Create class Java with name "PermissionModule"
 - Step 2: Typing code android/app/src/main/java/com/rnpermissionnativemodule/PermissionModule.java
 - Step 3: Crate class Java with name "PermissionPackage" để khai báo package android/app/src/main/java/com/rnpermissionnativemodule/PermissionPackage.java
 - Step 4: Import package to android/app/src/main/java/com/rnpermissionnativemodule/MainApplication.java ->  packages.add(new PermissionPackage());
-#Set up IOS:
+
+
+# Set up IOS:
 - Step 1: open project in xcode
 - Step 2: in folder project add file swift with name "ModuleName" -> file abc.swift
 - Step 3: press "next" -> require select "Create Bridging Header" with purpose expose objective c to swift
