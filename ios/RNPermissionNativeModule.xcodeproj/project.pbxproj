@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RNPermissionNativeModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNPermissionNativeModuleTests.m */; };
+		078846662A0FE32E001EAC87 /* PermissionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078846652A0FE32E001EAC87 /* PermissionModule.swift */; };
+		078846682A0FE3D6001EAC87 /* PermissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 078846672A0FE3D6001EAC87 /* PermissionModule.m */; };
+		0788466A2A0FE776001EAC87 /* LocationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078846692A0FE776001EAC87 /* LocationModule.swift */; };
+		0788466C2A0FE7A6001EAC87 /* LocationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0788466B2A0FE7A6001EAC87 /* LocationModule.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-RNPermissionNativeModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RNPermissionNativeModule.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -30,6 +34,11 @@
 		00E356EE1AD99517003FC87E /* RNPermissionNativeModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNPermissionNativeModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNPermissionNativeModuleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPermissionNativeModuleTests.m; sourceTree = "<group>"; };
+		078846642A0FE32D001EAC87 /* RNPermissionNativeModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNPermissionNativeModule-Bridging-Header.h"; sourceTree = "<group>"; };
+		078846652A0FE32E001EAC87 /* PermissionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionModule.swift; sourceTree = "<group>"; };
+		078846672A0FE3D6001EAC87 /* PermissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionModule.m; sourceTree = "<group>"; };
+		078846692A0FE776001EAC87 /* LocationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModule.swift; sourceTree = "<group>"; };
+		0788466B2A0FE7A6001EAC87 /* LocationModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationModule.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNPermissionNativeModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNPermissionNativeModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNPermissionNativeModule/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = RNPermissionNativeModule/AppDelegate.mm; sourceTree = "<group>"; };
@@ -92,6 +101,11 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				078846652A0FE32E001EAC87 /* PermissionModule.swift */,
+				078846642A0FE32D001EAC87 /* RNPermissionNativeModule-Bridging-Header.h */,
+				078846672A0FE3D6001EAC87 /* PermissionModule.m */,
+				078846692A0FE776001EAC87 /* LocationModule.swift */,
+				0788466B2A0FE7A6001EAC87 /* LocationModule.m */,
 			);
 			name = RNPermissionNativeModule;
 			sourceTree = "<group>";
@@ -207,7 +221,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -412,8 +426,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0788466C2A0FE7A6001EAC87 /* LocationModule.m in Sources */,
+				078846682A0FE3D6001EAC87 /* PermissionModule.m in Sources */,
+				0788466A2A0FE776001EAC87 /* LocationModule.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				078846662A0FE32E001EAC87 /* PermissionModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-RNPermissionNativeModule-RNPermissionNativeModuleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-RNPermissionNativeModule-RNPermissionNativeModuleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNPermissionNativeModuleTests/Info.plist;
@@ -500,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNPermissionNativeModule;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNPermissionNativeModule-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -526,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNPermissionNativeModule;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNPermissionNativeModule-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const {PermissionModule} = NativeModules;
+const {PermissionModule, LocationModule} = NativeModules;
 interface Props {}
 const App: FC<Props> = () => {
   const getAndroidPermission = () => {
@@ -35,15 +35,46 @@ const App: FC<Props> = () => {
         // Handle error
       });
   };
+
+  const getIOSPermission = () => {
+    PermissionModule.checkCameraPermission()
+      .then((hasPermission: any) => {
+        console.log('Camera permission:', hasPermission);
+      })
+      .catch((error: any) => {
+        console.error('Error checking camera permission:', error);
+      });
+    PermissionModule.checkMicrophonePermission()
+      .then((hasPermission: any) => {
+        console.log('Micro permission:', hasPermission);
+      })
+      .catch((error: any) => {
+        console.error('Error checking Micro permission:', error);
+      });
+
+    LocationModule.getMyLocation()
+      .then((location: any) => {
+        console.log('Latitude:', location.latitude);
+        console.log('Longitude:', location.longitude);
+      })
+      .catch((error: any) => {
+        console.error('Error getting location:', error);
+      });
+  };
   useEffect(() => {
     if (Platform.OS === 'android') {
       getAndroidPermission();
+    } else {
+      getIOSPermission();
     }
   }, []);
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => Linking.openSettings()}>
-        <Text>My Content</Text>
+        <Text>Open Android setting</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => Linking.openSettings()}>
+        <Text>Open IOS setting</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -51,6 +82,8 @@ const App: FC<Props> = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 export default App;
